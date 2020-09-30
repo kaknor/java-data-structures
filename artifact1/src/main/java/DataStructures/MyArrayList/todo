@@ -14,7 +14,7 @@ MyArrayList
         Handle better memory reallocation policy @done
     Implement method addAll @done
     Implement method clear @done
-    Implement method contains
+    Implement method contains @done
     Implement method ensureCapacity
     Implement method forEach
     Implement method indexOf

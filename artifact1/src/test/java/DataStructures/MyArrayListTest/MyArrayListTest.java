@@ -100,4 +100,11 @@ public class MyArrayListTest {
         l.clear();
         assertTrue(l.size() == 0);
     }
+
+    @Test
+    public void listMustContain5() {
+        int[] array = {1, 2, 3, 5, 6};
+        MyArrayList l = new MyArrayList(array);
+        assertTrue(l.contains(5) == true);
+    }
 }

@@ -104,4 +104,11 @@ public class MyArrayList {
         this.size_ = 0;
 	}
 
+	public boolean contains(int e) {
+		for (int i = 0; i < this.size_; ++i)
+            if (this.array_[i] == e)
+                return true;
+        return false;
+	}
+
 }

@@ -73,7 +73,7 @@ public class MyArrayList {
         } else {
             // Move inplace elements of array_ from index to size.
             for (int i = this.size_; i > index; --i) {
-                 this.array_[i] = this.array_[i - 1];
+                this.array_[i] = this.array_[i - 1];
             }
             ++this.size_;
             this.array_[index] = value;
@@ -84,10 +84,10 @@ public class MyArrayList {
         this.add(this.size_, e);
     }
 
-	public void addAll(int index, int[] arrayToAdd) {
+    public void addAll(int index, int[] arrayToAdd) {
         if (index < 0 || index > this.size_)
             throw new IndexOutOfBoundsException();
-        
+
         if (arrayToAdd == null)
             throw new NullPointerException();
 
@@ -95,20 +95,31 @@ public class MyArrayList {
             this.add(index + i, arrayToAdd[i]);
         }
     }
-    
+
     public void addAll(int[] arrayToAdd) {
         this.addAll(this.size_, arrayToAdd);
-	}
+    }
 
-	public void clear() {
+    public void clear() {
         this.size_ = 0;
-	}
+    }
 
-	public boolean contains(int e) {
-		for (int i = 0; i < this.size_; ++i)
+    public boolean contains(int e) {
+        for (int i = 0; i < this.size_; ++i)
             if (this.array_[i] == e)
                 return true;
         return false;
-	}
+    }
+
+    public void remove(int index) {
+        if (index == this.size_ - 1) {
+            this.size_--;
+            return;
+        }
+        for (int i = index; i < this.size_ - 1; ++i) {
+            this.array_[i] = this.array_[i + 1];
+        }
+        this.size_--;
+    }
 
 }

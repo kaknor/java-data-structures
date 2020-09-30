@@ -3,6 +3,7 @@ package DataStructures.MyArrayListTest;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import org.junit.Test;
 
@@ -107,4 +108,32 @@ public class MyArrayListTest {
         MyArrayList l = new MyArrayList(array);
         assertTrue(l.contains(5) == true);
     }
+
+    @Test
+    public void removeFirstElementFromList(){
+        int[] array = {5, 4, 3, 2, 1};
+        MyArrayList l = new MyArrayList(array);
+        int[] arrayAfterDeletion = {4, 3, 2, 1};
+        l.remove(0);
+        assertTrue(l.equals(arrayAfterDeletion));
+    }
+
+    @Test
+    public void removeLastElementFromList() {
+        int[] array = {5, 4, 3, 2, 1};
+        MyArrayList l = new MyArrayList(array);
+        int[] arrayAfterDeletion = {5, 4, 3, 2};
+        l.remove(l.size() - 1);
+        assertTrue(l.equals(arrayAfterDeletion));
+    }
+
+    @Test
+    public void removeElementAtIndex2FromList() {
+        int[] array = {5, 4, 3, 2, 1};
+        MyArrayList l = new MyArrayList(array);
+        int[] arrayAfterDeletion = {5, 4, 2, 1};
+        l.remove(2);
+        assertTrue(l.equals(arrayAfterDeletion));
+    }
+
 }

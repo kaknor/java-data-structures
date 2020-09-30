@@ -15,7 +15,6 @@ MyArrayList
     Implement method addAll @done
     Implement method clear @done
     Implement method contains @done
-    Implement method ensureCapacity
+    Implement method remove @done
     Implement method forEach
     Implement method indexOf
-    Implement method remove

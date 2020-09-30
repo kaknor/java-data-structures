@@ -70,4 +70,24 @@ public class MyArrayListTest {
         int[] arrayAfterAddition = {-1, 0, 1, 2};
         assertTrue(l.equals(arrayAfterAddition));
     }
+
+    @Test
+    public void addAllMustAppendNewArray() {
+        int[] array = {1, 2};
+        int[] arrayToAdd = {3, 4};
+        MyArrayList l = new MyArrayList(array);
+        l.addAll(arrayToAdd);
+        int[] arrayAfterInsertion = {1, 2, 3, 4};
+        assertTrue(l.equals(arrayAfterInsertion));
+    }
+
+    @Test
+    public void addAllMustAppendNewArrayAtSpecificIndex() {
+        int[] array = {1, 4};
+        int[] arrayToAdd = {2, 3};
+        MyArrayList l = new MyArrayList(array);
+        l.addAll(1, arrayToAdd);
+        int[] arrayAfterInsertion = {1, 2, 3, 4};
+        assertTrue(l.equals(arrayAfterInsertion));
+    }
 }

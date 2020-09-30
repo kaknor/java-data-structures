@@ -12,7 +12,7 @@ MyArrayList
 
     Implement method add @done
         Handle better memory reallocation policy @done
-    Implement method addAll
+    Implement method addAll @done
     Implement method clear
     Implement method contains
     Implement method ensureCapacity

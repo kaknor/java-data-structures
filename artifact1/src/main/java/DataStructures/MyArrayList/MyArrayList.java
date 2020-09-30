@@ -84,4 +84,16 @@ public class MyArrayList {
         this.add(this.size_, e);
     }
 
+	public void addAll(int[] arrayToAdd) {
+        for (int i = 0; i < arrayToAdd.length; ++i) {
+            this.add(arrayToAdd[i]);
+        }
+	}
+
+	public void addAll(int index, int[] arrayToAdd) {
+        for (int i = 0; i < arrayToAdd.length; ++i) {
+            this.add(index + i, arrayToAdd[i]);
+        }
+	}
+
 }

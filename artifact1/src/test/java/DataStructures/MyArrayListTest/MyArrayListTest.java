@@ -2,6 +2,8 @@ package DataStructures.MyArrayListTest;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
+
 import org.junit.Test;
 
 import DataStructures.MyArrayList.MyArrayList;
@@ -89,5 +91,13 @@ public class MyArrayListTest {
         l.addAll(1, arrayToAdd);
         int[] arrayAfterInsertion = {1, 2, 3, 4};
         assertTrue(l.equals(arrayAfterInsertion));
+    }
+
+    @Test
+    public void sizeMustBe0AfterClear() {
+        int[] array = {1, 2, 3};
+        MyArrayList l = new MyArrayList(array);
+        l.clear();
+        assertTrue(l.size() == 0);
     }
 }

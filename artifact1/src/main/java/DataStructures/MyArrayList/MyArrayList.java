@@ -100,4 +100,8 @@ public class MyArrayList {
         this.addAll(this.size_, arrayToAdd);
 	}
 
+	public void clear() {
+        this.size_ = 0;
+	}
+
 }

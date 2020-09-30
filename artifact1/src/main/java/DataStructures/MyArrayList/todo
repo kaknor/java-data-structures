@@ -13,7 +13,7 @@ MyArrayList
     Implement method add @done
         Handle better memory reallocation policy @done
     Implement method addAll @done
-    Implement method clear
+    Implement method clear @done
     Implement method contains
     Implement method ensureCapacity
     Implement method forEach

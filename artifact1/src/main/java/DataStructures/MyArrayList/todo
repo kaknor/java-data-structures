@@ -7,7 +7,7 @@ Arrays
 MyArrayList
     Implement method size @done
     Implement method get @done
-        Add negative indexes
+        Add negative indexes @done
     Implement method set @done
 
     Implement method add @done

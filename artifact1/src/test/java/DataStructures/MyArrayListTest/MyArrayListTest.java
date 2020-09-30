@@ -14,10 +14,10 @@ public class MyArrayListTest {
     }
 
     @Test
-    public void getMustBe5() {
+    public void getLastElementUsingMinusOneIndex() {
         int[] array = {0, 1, 2, 3, 4, 5};
         MyArrayList list = new MyArrayList(array);
-        assertTrue(list.get(5) == 5);
+        assertTrue(list.get(-1) == 5);
     }
 
     @Test(expected = IndexOutOfBoundsException.class)

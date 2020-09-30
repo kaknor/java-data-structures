@@ -1,7 +1,5 @@
 package DataStructures.MyArrayList;
 
-import java.util.Arrays;
-
 // Information from https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html
 public class MyArrayList {
 
@@ -28,10 +26,9 @@ public class MyArrayList {
     }
 
     public int get(int i) {
-        // TODO : Handle negative index in a python like fashion.
         if (i > this.size_)
             throw new IndexOutOfBoundsException();
-        return this.array_[i];
+        return (i >= 0) ? this.array_[i] : this.array_[this.size_ + i];
     }
 
     public Boolean equals(int[] array) {

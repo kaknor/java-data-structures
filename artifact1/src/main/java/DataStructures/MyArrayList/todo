@@ -1,0 +1,21 @@
+Arrays
+    Implement method binarySearch 
+    Implement method paralleleSort
+    Implement method setAll
+    Implement method sort
+
+MyArrayList
+    Implement method size @done
+    Implement method get @done
+        Add negative indexes
+    Implement method set @done
+
+    Implement method add @done
+        Handle better memory reallocation policy @done
+    Implement method addAll
+    Implement method clear
+    Implement method contains
+    Implement method ensureCapacity
+    Implement method forEach
+    Implement method indexOf
+    Implement method remove

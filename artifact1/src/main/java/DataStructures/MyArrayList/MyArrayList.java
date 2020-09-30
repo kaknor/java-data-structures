@@ -122,4 +122,11 @@ public class MyArrayList {
         this.size_--;
     }
 
+	public int indexOf(int e) {
+		for (int i = 0; i < this.size_; ++i)
+            if (this.array_[i] == e)
+                return i;
+        return -1;
+	}
+
 }

@@ -2,9 +2,6 @@ package DataStructures.MyArrayListTest;
 
 import static org.junit.Assert.assertTrue;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 import org.junit.Test;
 
 import DataStructures.MyArrayList.MyArrayList;
@@ -134,6 +131,20 @@ public class MyArrayListTest {
         int[] arrayAfterDeletion = {5, 4, 2, 1};
         l.remove(2);
         assertTrue(l.equals(arrayAfterDeletion));
+    }
+
+    @Test
+    public void findIndexOfLastEmelementOfTheList() {
+        int[] array = {1, 2, 3, 4};
+        MyArrayList l = new MyArrayList(array);
+        assertTrue(l.indexOf(4) == l.size() - 1);
+    }
+
+    @Test
+    public void findIndexOfElementNotPresentInTheList() {
+        int[] array = {1, 2, 3, 4};
+        MyArrayList l = new MyArrayList(array);
+        assertTrue(l.indexOf(-123) == -1);
     }
 
 }

@@ -1,5 +1,7 @@
 package DataStructures.MyArrayList;
 
+import javax.lang.model.util.ElementScanner6;
+
 // Information from https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html
 public class MyArrayList {
 
@@ -25,10 +27,10 @@ public class MyArrayList {
         return this.size_;
     }
 
-    public int get(int i) {
-        if (i > this.size_)
+    public int get(int index) {
+        if (index > this.size_)
             throw new IndexOutOfBoundsException();
-        return (i >= 0) ? this.array_[i] : this.array_[this.size_ + i];
+        return (index >= 0) ? this.array_[index] : this.array_[this.size_ + index];
     }
 
     public Boolean equals(int[] array) {
@@ -119,11 +121,26 @@ public class MyArrayList {
         this.size_--;
     }
 
-	public int indexOf(int e) {
-		for (int i = 0; i < this.size_; ++i)
+    public int indexOf(int e) {
+        for (int i = 0; i < this.size_; ++i)
             if (this.array_[i] == e)
                 return i;
         return -1;
-	}
+    }
 
+    private int hatBinarySearch(int e, int begin, int end) {
+        int pivot = (end + begin) / 2;
+        if (this.array_[pivot] == e)
+            return pivot;
+        if (begin == end)
+            return -end - 1;
+        if (this.array_[pivot] >= e)
+            return this.hatBinarySearch(e, begin, pivot);
+        else
+            return this.hatBinarySearch(e, pivot + 1, end);
+    }
+
+    public int binarySearch(int e) {
+        return this.hatBinarySearch(e, 0, this.size_ - 1);
+    }
 }

@@ -1,5 +1,7 @@
 Arrays
-    Implement method binarySearch 
+    Implement method binarySearch
+        Recursive version @done
+        Iterative version
     Implement method paralleleSort
     Implement method setAll
     Implement method sort

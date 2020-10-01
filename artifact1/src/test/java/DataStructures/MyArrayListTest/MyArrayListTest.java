@@ -147,4 +147,25 @@ public class MyArrayListTest {
         assertTrue(l.indexOf(-123) == -1);
     }
 
+    @Test
+    public void find5UsingBinarySearchMustReturn6() {
+        int[] array = {-42, -1, 0, 1, 2, 3, 5, 126, 127};
+        MyArrayList l = new MyArrayList(array);
+        assertTrue(l.binarySearch(5) == 6);
+    }
+
+    @Test
+    public void find128UsingBinarySearchMustReturnMinus9() {
+        int[] array = {-42, -1, 0, 1, 2, 3, 5, 126, 127};
+        MyArrayList l = new MyArrayList(array);
+        assertTrue(l.binarySearch(128) == -9); 
+    }
+
+    @Test
+    public void findMinus43UsingBinarySearchMustReturnMinus1() {
+        int[] array = {-42, -1, 0, 1, 2, 3, 5, 126, 127};
+        MyArrayList l = new MyArrayList(array);
+        assertTrue(l.binarySearch(-43) == -1); 
+    }
+
 }
